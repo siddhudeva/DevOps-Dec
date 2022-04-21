@@ -1,0 +1,17 @@
+---
+	- hosts: localhost
+   	become: yes
+    tasks: 
+	   - name: installing dependicies
+	     yum:
+	      name: yum-utils 
+        state: present
+	   - name: repositoory download
+	     yum_repository: 
+	       name: hashicrop
+	       description: terraform repo
+         baseurl: https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+     -  name: installing terraform
+        yum: 
+         name: terraform
+         state: present

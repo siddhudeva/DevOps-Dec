@@ -1,0 +1,38 @@
+- hosts: localhost
+  become: yes
+  tasks: 
+     - name: update cache
+       yum: update_cache=yes
+
+     - name: installting java 11 version
+       yum: 
+        name: java-11-openjdk-devel
+        state: present
+        
+     - name: getting repos
+       shell:
+         cmd: wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+     - name: downloading repos
+       get_url:
+        url: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+        dest: /etc/repos.d/jenkins.repo
+        # mode: 0755
+
+      #  yum_repository:
+      #    name: jenkins.repo
+      #    baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+     
+     - name: jenkins rpm
+       shell: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+     - name: installing jenkins
+       yum: 
+         name : jenkins
+         state: present
+
+
+              
+    # - name: downloading and archiving jenkins war file
+    #   unarchive: 
+    #      srt: 

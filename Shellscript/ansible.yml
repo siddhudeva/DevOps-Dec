@@ -1,0 +1,13 @@
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: updating cache
+      yum: 
+       update_cache=yes 
+    - name: install java 11
+      yum: 
+        name: java-11-openjdk-devel
+        # name: {{java_version}}
+        state: installed
+
+        # java -version 2>&1 | grep version | awk  '{print $3}' | sed 's/" //g'

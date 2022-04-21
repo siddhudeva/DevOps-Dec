@@ -1,0 +1,61 @@
+# - hosts: localhost
+#   become: yes 
+#   tasks:
+#     - name: rpm installation
+#       ansible.builtin.get_url:
+#         state: present
+#         key: rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+#     # - name: rpm installation usnig key
+#     #   ansible.builtin.yum: name=https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+#     # - name: rpm isntllation
+#     #   ansible.builtin.shell:
+#     #           rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+#     - name: adding repository
+#       ansible.builtin.yum_repository:
+#         name: jenkins
+#         description: jenkins repo
+#         baseurl: https://pkg.jenkins.io/redhat-stable
+
+#     - name: instllation of softwares
+#       ansible.builtin.yum: 
+#         name: '{{ packages }}'
+#         state: present
+#         update_cache: yes
+#         vars: 
+#           packages:
+#            - java-11-openjdk-devel
+#            - jenkins
+
+#     - name: starting services
+#       ansible.builtin.systemd:
+#         name: jenkins
+#         state: start
+#         enable: yes
+
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Ensure Jenkins repository is added
+      yum_repository:
+        name: jenkins-ci
+        description: jenkins-ci package repository
+        baseurl: http://pkg.jenkins.io/redhat
+        gpgkey: https://pkg.jenkins.io/redhat/jenkins.io.key
+        gpgcheck: yes
+    - name: Ensure gpp key is imported
+      rpm_key:
+        state: present
+        key: https://pkg.jenkins.io/redhat/jenkins.io.key
+        
+    - name: Ensure Jenkins and java-devel package installed
+      yum:
+        name: '{{ packages }}'
+        state: present
+        update_cache: true
+      vars:
+        packages:
+          - jenkins
+          - java-devel

@@ -1,0 +1,17 @@
+- hosts: localhost
+  become: yes
+  tasks: 
+    - name: adding hashicrop repo
+      yum_repository:
+         name: hashicrop
+         description: adding hasicrop repos
+         file: hashicrop
+         baseurl:  https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+         gpgcheck: no
+
+    - name: install yum utils
+      yum: 
+        name: 
+         - yum-utils
+         - terraform   
+   

@@ -1,0 +1,8 @@
+hosts: dev-env
+become: yes
+tasks:
+  - name: register the name of OS
+    raw: cat /etc/system-release
+    register: system_release
+    change_when: no
+      

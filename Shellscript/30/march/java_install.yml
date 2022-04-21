@@ -1,0 +1,30 @@
+# ---
+# - hosts: localhost
+#   become: yes
+#   tasks: 
+#     - name: update caches and installing java
+#       yum:
+#         name: java-openjdk-11-devel
+#         state: present
+#         update_cache: yes
+
+- hosts: localhost
+  become: yes 
+  tasks: 
+     - name: get java
+       get_url:
+         url: https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.rpm
+         dest: /tmp
+     - name: install oracle java
+       yum:
+         name: /tmp/jdk-18_linux-x64_bin.rpm
+         state: present
+
+     - name: get jenkins repo
+       get_url:
+         url: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+         dest: /tmp
+     - name: install rpm
+       yum: 
+         name: jenkins.io.key
+         state: present

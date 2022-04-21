@@ -1,0 +1,87 @@
+---
+- hosts: localhost
+  become: yes 
+  tasks:
+    - name: downloading of repository
+      yum_repository:
+         name: jenkins
+         description: jenkins repo file
+         baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+         state: present
+    - name: install jenkins
+      yum:
+        name: jenkins
+        state: present
+    - name: enabling and starting jenkins
+      systemd:
+       name: jenkins
+       state: start
+       enable: yes
+
+
+
+
+
+
+
+
+# # - hosts: localhost
+# #   become: yes
+# #   tasks: 
+# #     - name: Add multiple repositories into the same file (1/2)
+# #       yum_repository:
+# #         name: jenkins
+# #         description: jenkins repo file
+# #         file: jenkins.repo
+# #         baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+# #         gpgcheck: no
+# #     - name: 
+    
+
+# - hosts: localhost
+#   # remote_user: 
+#   become: true
+#   tasks:
+#     - name: Add multiple repositories into the same file (1/2)
+#       yum_repository:
+#         name: jenkins.repo
+#         description: jenkins repository
+#         file: jenkins
+#         baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
+#         gpgcheck: no
+#     - name: installing software
+#       yum: 
+#         name: 
+#            - java-11-openjdk-devel
+#            - jenkins
+#         state: present
+
+         
+#       # - name: Ensure Jenkins repository is added
+#     #   yum_repository:
+#     #     name: jenkins-ci
+#     #     description: jenkins-ci package repository
+#     #     baseurl: http://pkg.jenkins.io/redhat
+#     #     gpgkey: https://pkg.jenkins.io/redhat/jenkins.io.key
+#     #     gpgcheck: yes
+
+#     - name: Ensure gpp key is imported
+#       rpm_key:
+#         state: present
+#         key: https://pkg.jenkins.io/redhat/jenkins.io.key
+    
+#     - name: Ensure Jenkins and java-devel package installed
+#       yum:
+#         name: '{{ packages }}'
+#         state: present
+#         update_cache: true
+#       vars:
+#         packages:
+#           - jenkins
+#           - java-devel
+  
+#     - name: unstall jenkis
+#       yum: 
+#         name: jenkins
+#         state: present
+    

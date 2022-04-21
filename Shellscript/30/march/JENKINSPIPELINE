@@ -1,0 +1,48 @@
+def call()
+pipeline {
+  agent {
+     labels WORKSTATION
+  }
+  environment{}
+  stages {
+      stage('Compilation') {
+        steps {
+            sh '''
+             mvn clean package
+            '''
+        }
+      }
+      stage('sonarqube code checks') {
+          steps {
+              sh '''
+                sonar-scanner <files> <sonarqubeurl:port/repository/nameofrepo>
+                sonarqualitygate.sh
+              '''
+          }
+      } 
+      stage ('lintchecks') {
+          steps {
+             echo enlint checks 
+          }
+      }
+      stage ('unit testcases') {
+        steps {
+         echo  unittests by native laungauge 
+        }
+      }
+      stage ('preparing artifacts') {
+          steps {
+              script {
+                preparing_artifacts()
+              }
+          }
+      }
+      stage ('publishing artifacts') {
+          steps {
+              script {
+                  publishing_artifacts()
+              }
+          }
+      }      
+    }
+}

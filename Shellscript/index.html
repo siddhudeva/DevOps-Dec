@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <h1>QUESTIONS WHICH I NEED I TO PRATICE</h1>
+    <P> 1] difference btw git pull and git update (Git Fetch - it will do updates the Branch that you are on)
+        <br>
+        (Git remote Update - will update all the branches set to track remote ones, but not merge any changes in)
+        <br>
+        (Git Fetch - )
+        <br>
+        (Git Pull - to git the latest changes happened form the central Repository, this would be the one we used to local update)
+        <br>
+        2] done git pull and git commit? what will happen?
+        <br>
+        3] automating triggers? how many times
+        <br>
+        4] SonarQube
+        <br>
+        5] docker private account. client accounts..
+        <br>
+        6] who are creating docker images? if you how? -- docker hub credentials
+        <br>
+        7] offshore and onshore peoples?
+        <br>
+        8] public repository's for reference only-- docker file***
+        <br>
+        9] banking servers
+        <br>
+        10] red hat RHL6
+        <br>
+        11] i want to learn new technology's and i want to learn new technologies. client not approved for improvements
+        <br>
+        12] difference bwn svn and git
+        <br>
+        13] nexus ?
+        <br>
+        14] git conflict?
+        <br>
+        <br>
+        * How many aws resources you used?
+        <br>
+        * Any automation?
+        <br>
+        * How do you get the request?
+        <br>
+        * Lets say you have a application running in ec2 instance what is the monitoring tool that use for monitoring..?
+        <br>
+        * Application monitoring tool? Prometheus and graphene.
+        <br>
+        <br>
+        Latency: how much time Is required to process or respond to a request is nothing but latency
+        Horizontal axis---- Datehistogram
+        vertical axis ---- respond time
+        <br>
+        <br>
+        Traffic: how many request are coming to your application with in a time.. HTTP REQUEST PER SECOND
+        Horizontal axis -- datahistogram @timestamp
+        Veritical Axis -- count of records
+        <br>
+        <br>
+        Errrors: Errors are nothing but the no of failed requests (RATE OF REQUESTS THAT FAILS)
+        <br>
+        Horizontal axis -- Datehistogram @timestamp
+        <br>
+        Vertical axis -- count of records and here we have to check for the failed records so we have to filter it
+        <br>
+        In Breakdown by -- HTTP_STATUS_CODE> 399
+        <br>
+        <br>
+        Saturation:
+        <br>
+        1. Uptime : up
+        <br>
+        2. Network: network received, (node_network_received_bytes_total); Network transferred, (node_network_transfer_bytes_total);
+        <br>
+        3. Diskspace: node_filesystem_avail_bytes
+        <br>
+        4. Cpu utilization: node_cpu_seconds_total
+        <br>
+        5. Memory utilization: node_
+        <br>
+        6. Memory utilization:
+        <br>
+        <br>
+        * What are the different metrics you monitoring during monitoring?
+        <br>
+        * How do you create a dash boards for your metrics
+        <br>
+        * What is the difference between basic and detailed monitoring?
+        <br>
+        * Cross zone load balancing?
+        <br>
+        * What if I didn’t select the instances while creating elb?
+        <br>
+        * Threshold time
+        <br>
+        * Networking in Linux?
+        <br>
+        * What is the use of DNS Port number? Ans: 53
+        <br>
+        * How do you create DNS records in aws?
+        <br>
+        * What are the storage classes available in S3?
+        <br>
+        * how do you said lifecycle policy's?
+        <br>
+        * What is a NAT gateway?
+        <br>
+        * Bigdata?
+        <br>
+        <br>
+        * What kind of branching strategy you have used?
+        <br>
+        * Have you used Jenkins? what type of user metrics are used ? (project based metrics -- some user will only see the console and some people can if you can go to the security user administration there we can see the under user part we will have metrices and based up on our requirement we will give the access)
+        <br>
+        * Have you heard of role based metrics?
+        <br>
+        * How would you copy complete project from one sever to another server in Jenkins?
+        <br>
+        * Have you used build tools? Can you tell me the what is the use of maven? (maven is a build tool so like in maven we can define the dependences based on the dependencies the code will get called and it will get build so it is like kind build tool and project object model we call, and there will be filed called POM.xml which will contains all the information of project and configuration related to the project and there will be we have dependences, build directorial kind of data)
+        <br>
+        * Can you tell me the life cycle of your project in DevOps? ()
+        <br>
+        * Do you know the advantage of asset management software.
+        <br>
+        * Scripting?
+        <br>
+        * Allocating disk spaces?
+        <br>
+        * Can you tell me which type of OS platforms which you have been worked on? (RedHatLinux and Centos for few of the lower environments, we use RedHatLinux for Dev Pre-prod and Prod and Centos is for POC's like and all)
+        <br>
+        * Scripting ? (yes I do have exposure on scripting but as we use ansible for automation we used to write YAMLs yet another markup language for most of the automations)
+        <br>
+        * What kind of exploits generally happen to an application?
+        <br>
+        * Aws WAF
+        <br>
+        * SSL ?
+        <br>
+        <br>
+        * What do you configured in Jenkins?
+        <br>
+        * How many parallel builds can Jenkins job? (no of executors on master)+(no of remote slaves)*(executers per slave)
+        <br>
+        * IN DOCKER
+        <br>
+        lets say. If we have a java web application it has a tom cat and MySQL database so how many containers do you want? (if you run the MySQL is also in the container then 2 containers)
+        <br>
+        * How can you club the containers ??( docker compose and put the those containers and we can put those into two services and we can link the container and then they start working. )
+        <br>
+        * How do you connect between the two containers let's say a tomcat container and mysql container?(we have a concept called linking, we can link actually we can expose the variables of 1 container to another container, assuming to connect your MySQL database you are having username and password which are being passed like variables, and those variables are loaded inside the container and configured to connect MySQL database to tomcat server )
+        <br>
+        * How do you handle load balancing when the container are scale out.
+        <br>
+        * State some docker commands? Docker PS
+        <br>
+        Docker pull <image> , docker run <container name>, docker exec -it <container name> -- cat /tmp/resoj…Docker
+                    <br>
+                    * How do you connect the network of the host vm or host wasting? (bridge network or host network)
+                    <br>
+                    * Ansible? (it is configuration management tool and it uses push method meaning it will configure the systems without any software install in node side, it over ssh)
+                    <br>
+                    * Aws services?
+                    <br>
+                    * What is command to get hardware details of the machine? (lscpu and lshw)(dmi docode <= he says) <br>
+                        * Have a written Docker file? (From add copy workdir add entry point and org and env(Environment)
+                        <br>
+                        also)
+                        <br>
+                        <br>
+                        * Do you know application discovery?
+                        <br>
+                        * How can you change port number of Jenkins? (we have jenkins.xml file and we can overwrite and we have to restart )
+                        <br>
+                        * How can install Jenkin ?
+                        <br>
+                        * Five plugins of plugins?
+                        <br>
+                        <br>
+                        * Any difference between packaging
+                        <br>
+                        <br>
+                        * Do you know application discovery?
+                        <br>
+                        * How can you change port number of Jenkins? (we have jenkins.xml file and we can overwrite and we have to restart )
+                        <br>
+                        * How can install Jenkin ?
+                        <br>
+                        * Five plugins of plugins?
+                        <br>
+                        <br>
+                        * Any difference between packaging
+                        <br>
+                        <br>
+                        ============================================
+                        <br>
+                        ==>> First Interview Questions:-
+                        <br>
+                        1. How can you install plugins in Jenkins.
+                        <br>
+                        2. Assume that you have 2 servers which are connected to Load balancer, in which one server getting 503 error, How can you fix the issue?
+                        <br>
+                        3. Types of S3?
+                        <br>
+                        4. How can you get Kubernetes logs?
+                        <br>
+                        5. What is Cluster IP
+                        <br>
+                        6. What is the difference between Deployment set and Stateful set?
+                        <br>
+                        7. Write a playbook to install java in it..?
+    </P>
+    <h2>SELF AND PROJECT EXPLANATION</h2>
+    <p> 1] i will be doing continuous integration on daily basis
+        <br>
+        we are using git as vcs
+        <br>
+        ans doing code merges resolving the conflicts lets say merge conflicts or any conflicts whenever my developer says and on git command line=
+        <br>
+        continuous integration we use jenkins where we are involved in installing from scratch and doing job configuration based on the customer requirement and cloning the GitHub with Jenkins so that Jenkins will communicate github to fetch the version controlling system.
+        <br>
+        we generated ssh keys on GitHub site and copied that same under our scm part in Jenkins and i did master node configuration have agents created under our master server where ever their is most load on the master we used triggers the jobs under our slaves
+        <br>
+        so that the traffic will be routed to the slaves and the master will be stable.
+        <br>
+        we are using aws for creating the cloud infrastructure so here i was involved in creating auto scaling, auto scaling means when ever then the load is high then that time instances are creating and
+        <br>
+        when the load goes down then the instances will be terminated automatically this helps in decreasing the cost and improves high availability of application
+        <br>
+        using elasticloadbalancing to route the traffic btw different servers and whenever the their is a failover server at that time traffic will be routed to healthy server.
+        <br>
+        <br>
+        we use ansible for doing configuration management tool and onc the build is done and the artifact is available in art factory repository nexus
+        <br>
+        so ansible will pick the antifactory which is available in nexus repository and it is directly deploy into our servers here there is no manual introversion is needed. so here we are directly deploying the code from repository to servers using Jenkins and ansible and it is a kind of conations deployment
+        <br>
+        first we will do it in the test and then we deploy it in the production manually because we are using continues delivery
+        <br>
+        first we will do it in the test and stage environment is similar to prepped so its a kind of production but not exactly the production environment. once it is passed and ok then we used to deploy it into the prod environment
+        <br>
+        whenever other teams encountered any issues they will raise a ticket and we will work on their requirement and then we try to automation for their particular environment.
+        <br>
+        when ever any incidents p1 incidents p2 incidents at that time we are the first one to contact then we used to resolve their issues
+        <br>
+        <br>
+        nexus is a antifactory we can store our artifacts so in Jenkins if we have generated artifices then you can store our artifices in nexus is a centralized artifactory which is used to store the artifacts
+        <br>
+        Nexus is a tool from sonar type which comes with n no of features we can store war files jar files and diffrencnt types files and it also supports for Raw so that any type of code we can store here.
+        <br>
+        and the default password and user id is admin admin123
+        <br>
+        ===================
+        <br>
+        We are doing continuous builds on daily and sprint basis
+        <br>
+        We are use ansible for configuration management
+        <br>
+        We use Prometheus for monitoring and sns alarms
+        <br>
+        ===================
+        <br>
+        Hai xyz good ….. How are you?
+        <br>
+        <br>
+        Can you tell about Ur self?
+        <br>
+        My name is and from
+        <br>
+        I have 4 years of experience In it 8 months on GIS and Autocad and remaining 3 + years of experience in DevOps practice only and I got good exposer in different tools and I involved in continues integration so most of the services I use in the
+        <br>
+        Jenkins is a continues integration tool
+        <br>
+        And git for version control system
+        <br>
+        And I do have experience in container level for dockerization and running the container from the images what we have created and I have experience in terraform to create infrastructure
+        <br>
+        Coming to cloud creating ec2 maintain the and taking the snapshots attaching the volumes creating VPC doing auto scaling configuration those kind of experience I have.
+        <br>
+        For continues integration we use Jenkins and I have exposer on Jenkins as well where
+        <br>
+        <br>
+        I have built part in job configuration and build activities user administration part and as well as master and slave configurations
+        <br>
+        In git corrently I am working for Robocop ecommerce application where we are using agile methodology so most of your sprints are carried out in 2-3 weeks and we are maintaining a separate branch for every sprint after 3 sprints major release will happen and the product will goes to the customer , with this we used to create different branches based on the sprints once the testing is done on the test code and once the code is ok then we will merging into the main branches and those kind of continues integration activities we will do daily and apart from this
+        <br>
+        I have exposure on ansible configuration management as well where we configuring diff servers in our environment so that there is no manual work to do the IT infrastructure automation so I was involved in setting up the ansible in environment from scratch like creating inventory files and creating ssh configurations and making ansible as a password less logins and making a ansible installed and checking the servers are properly,,,,,,.
+        <br>
+        Those kind of activities I have exposure,,
+        <br>
+        <br>
+        BRANCHING STRETAGY:
+        <br>
+        <<SELF AND PROJECT EXPLANATION.wma>>
+            <br>
+            =================================================
+            <br>
+            <br>
+            We use Jira Atlassian product iteration and tracking purpose and we do follow agile with scrum where we work in sprints of 17days so at the start of sprint we used to have a kickoff meeting with the prerequisites what we have gathered as a user stories in that particular sprint once the sprint is finished we used to give the demos on the user stories what we have implemented those features to the customer and if the customer says ok then we used close the user stories and close those sprints and end of the sprint we have retro respective where the team like developer DevOps teams and scrum teams along with project managers and product owner will join and will discuss what went fine and what went didn't fine and what will be the feature plans to avoid the issues what we have paste or the bloggers we have in the particular so that we can plan better
+            <br>
+            <br>
+            Recent scripting:
+            <br>
+            I used to do for our day to day activities automation stuff means…
+            <br>
+            <br>
+            One of Developer comes and asked for their nexus repositories like they are pushing so many builds now he wants to come up with some automation stating that he don’t want to keep a builds of older than 6 days for that he wants to build me a script that will clean up the work space, in Jenkins he wants to make me a scripts.. Those scripts I have created
+            <br>
+            ===============================
+            <br>
+            <br>
+            Describe DevOps:
+            <br>
+            * DevOps is not about technology its more about practice
+            <br>
+            * And we can achieve more no of deployments in lesser time with quality product which will be delivered to the customer for 3 weeks once or 3-6 months once.
+            <br>
+            * I have exposer on aws for cloud
+            <br>
+            * Jenkins and git
+            <br>
+            * apacheMaven and nodejs and python for build and
+            <br>
+            * We use terraform to create a environment like dev and test
+            <br>
+            * And I have a exposer on docker aswell creating docker containers.images and maintaining the dockerimages on docker hub and and pulling and pushing based on requirements.
+            <br>
+            * We use ansible for configuration management where we do automation like deploymetn and installing like that
+            <br>
+            * Involved in ssl certificatate installation
+    </p>
+    <h3>HOW TO QUESTION AND HOW TO ASK</h3>
+    <P>ANY QUESTIONS?
+        <br>
+        * I just want to know a over view of the project for which I am getting interviewed..!
+        <br>
+        (or)
+        <br>
+        * Can I know the what exactly the project and what will be the roles and responsibilities of the position which I am interviewed?
+    </P>
+    <h4>IMPORTANT POINTS</h4>
+    <P> * DOCKER UCP == LICENSE
+        <br>
+        * If you want a stand alone service go for a single container and your applicaton comes with microservices or a single application coming with multiple containers then that case the stack is useful (clubbing the both containers if they comes as a single application and goes as a single applications)
+        <br>
+        Docker commands:
+        <br>
+        if you want to pull the image: docker pull <name>
+            <br>
+            If you want to create a image: docker images
+            <br>
+            If you want to run a dockerfile : docker apply -f
+            <br>
+            If you want to run Docker : docker run
+            <br>
+            If you want to execute command : docker exec
+            <br>
+            If you want to remove docker : docker rm <contianerid>
+                <br>
+                If you want to remove an image: docker rmi <imageid>
+                    <br>
+                    If you want to configure: docker inspct
+                    <br>
+                    <br>
+                    * Jenkins can be restarted on webui using: http://<ip>:8080/safarestart or /restart
+                        <br>
+                        * We can access jenkins through CLI, and if it is first time we can go like form scratch:;;; http://Jenkins-IP:PORT/cli
+                        <br>
+                        <br>
+                        * DevOps:
+                        <br>
+                        DevOps is a set of Practices that combines software development and IT operations. It aims to shorten the systems Development life cycle and provide continuous delivery with high software quality.
+                        <br>
+                        DevOps is Complementary with agile Software Development;
+                        <br>
+                        <br>
+                        * Agile: agile is timeboxed, iterative approach to software delivery that builds software incrementally from the start to the project
+                        <br>
+                        <br>
+                        * SDLC: SOFTWARE DEVELOPMENT LIFE CYCLE:
+                        <br>
+                        SDLC involves in verious stages during its entaire life cycle and those are
+                        <br>
+                        1. requirement and planning
+                        <br>
+                        2. Analyizing and designing
+                        <br>
+                        3. Implemetation or developing
+                        <br>
+                        4. Testting
+                        <br>
+                        5. Deployment
+                        <br>
+                        6. Maintainence
+    </p>
+    <h5>SETUPS</h5>
+    <P>Installing Jenkins:
+        <br>
+        1. Create a server with your requirement and we should open port number 8080
+        <br>
+        2. install java {yum install java-1.8*}
+        <br>
+        3. We have to setup the java path.in .bash_profile file
+        <br>
+        4. We have to add repo and rpm for key
+        <br>
+        5. And now install jenkins{yum install jenkins -y}
+        <br>
+        6. Systemctl start jenkins
+        <br>
+        7. Systemctl enable jenkins
+        <br>
+        8. update the password in jenkins GUI
+        <br>
+        <br>
+        How do you design your capacity? Means how much resources you want. ?
+        <br>
+        <br>
+        We do some load testing, benchmark testing some kind of things. Our goal is these milli seconds 250ms 500ms 1000ms=1sec
+        <br>
+        For Our business 1 sec is OK or 500ms is ok for us.
+        <br>
+        To achieve that we did some load running using some benchmark testing or load testing.
+        <br>
+        To achieve that minimum with 2 pods because of high availability things like that we derived a capacity. based on that we use the resources.
+    </P>
+    <h6>MY PREPARATION</h6>
+    <P>Hi my name is D Siddi mahadeva,I am from East Godavari..
+        <br>
+        I have 3.2 years of experience as DevOps engineer with DevOps tools like git, GitHub, Apache Maven, Jenkins, terraform Docker nexus artifactory, Kubernetes and ansible.Coming to my roles and responsibilities...
+        <br>
+        <br>
+        1. I will setup CI and CD pipelines for different repositories and taking care of pipeline failures.
+        <br>
+        Q: How?
+        <br>
+        When ever the code is pushed to the central repository the code has to start travel to the various checks actually like Lint check and whitebox checks that is SonarQube and unit test this. type of tests should be happens
+        <br>
+        But when ever the pushed code contains tag on it so that it will go the nexus antifactory, and we can route to where ever we want or deploy it to any environments like dev qa and prepped playgrounds etc.. Using automation tools like ansible etc.
+        <br>
+        <br>
+        2. Adding users and providing required access for them like read, write, admin based on requirement.
+        <br>
+        We genrally use aws IAM (identity and access management) and I create users groups and roles
+        <br>
+        Using polices like read and write
+        <br>
+        <br>
+        3. I will check Jira board generally developers created jira ticket for fixing pipeline failures and also for setting up new release pipelines
+        <br>
+        <br>
+        4. Deployment of application in Kubernetes in different environments like playground, preprod.
+        <br>
+        <br>
+        5. Checking status of pods whether these are running fine or not, and fixing if these are not up and running.
+        <br>
+        <br>
+        Q:_ how you check the status pods> by using kubectl describe pods --namespace <namespace>
+            <br>
+            And also and also we can check running status of all pods using: Kubectl get pods --namespace <name of the namespace>
+                <br>
+                Q: How can you fix? To fix something , firstof all we need to know what happened to the pod so I will go and check the logs, so that I can get some idea where the actual problem comes int o the picture
+                <br>
+                to check the pods we can use EXEC command
+                <br>
+                Kubectl exec --namespace <name of the namespace> -it <pod name> -- /var/log/nginx/error.log
+                        <br>
+                        And alsoe
+                        <br>
+                        <br>
+                        7. Taking logs from the pods in Kubernetes and providing to developers regarding application related issues.
+                        <br>
+                        Kubectl logs -f <name of pod> -n <name of namespace>
+                                <br>
+                                <br>
+                                8. Automating deployment by creating jenkins job with build with parameter options. And along with ansible.
+    </P>
+</body>
+
+</html>
